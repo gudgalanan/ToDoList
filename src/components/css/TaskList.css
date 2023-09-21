@@ -160,6 +160,7 @@
   }
 }
 .task-list-container {
+  margin-top: 100px;
   display: flex;
   margin-right: auto;
   margin-left: auto;
