@@ -1,0 +1,51 @@
+@import "./variables";
+
+form {
+  display: grid;
+  row-gap: 20px;
+  width: 100%;
+  input {
+    padding: 15px 10px 15px 20px;
+    &::placeholder {
+      @extend .label;
+    }
+  }
+  .row {
+    justify-content: space-between;
+  }
+  label {
+    @extend .label;
+    textarea {
+      padding: 15px 10px 15px 20px;
+      height: 200px;
+      width: 100%;
+    }
+    input,
+    select {
+      margin-left: 15px;
+
+      padding: 5px;
+    }
+  }
+  button {
+    @extend .button;
+  }
+}
+
+@media screen and (max-width: 1999px) {
+  form .row {
+    label {
+      width: min-content;
+      input,
+      select {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1999px) {
+  form {
+    row-gap: 10px;
+  }
+}

@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Marcellus&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$font-family: "Nunito", sans-serif;
+$gray-light: #a4a1a1;
+$gray: #504e4e;
+$black: #1e1e1e;
+$white: #fff;
+$theme: #4b7111;
+$detail-btn: #79aff2;
+$remove-btn: #ec6e6e;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+.row {
+  display: flex;
+}
+.h2 {
+  margin-bottom: 40px;
+
+  text-align: center;
+  white-space: nowrap;
+
+  color: $black;
+  font-family: $font-family;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px; /* 116.667% */
+}
+
+.button {
+  padding: 10px 0;
+  background-color: $theme;
+
+  border: none;
+
+  color: $white;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.07px;
+  @extend .hover-button;
+}
+
+.label {
+  color: $black;
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.hover-button {
+  position: relative;
+  transition: all 0.5s ease;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.5s ease;
+  }
+  &:before {
+    left: 0;
+    width: 0;
+    color: white;
+    border: 1px solid white;
+    opacity: 0;
+  }
+  &:after {
+    left: 100%;
+    width: 0;
+    color: white;
+    border: 1px solid white;
+    opacity: 0;
+  }
+  &:hover:before {
+    width: 100%;
+    opacity: 1;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+  }
+}
+.hover-button2 {
+  position: sticky;
+
+  // position: relative;
+  overflow: hidden;
+  transition: all 0.35s;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: $theme;
+    z-index: -1;
+    transition: all 0.35s;
+  }
+
+  &:before {
+    opacity: 0.5;
+  }
+
+  &:after {
+    transition-delay: 0.2s;
+  }
+
+  &:hover:before,
+  &:hover:after {
+    border-color: $theme;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .task-list-container {
+    max-width: 1320px;
+  }
+}
+@media screen and (max-width: 1999px) {
+  .task-list-container {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .task-list-container {
+    max-width: 960px;
+  }
+  .h2 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+  .task-list-container .task-form-container,
+  .task-list-container .task-list {
+    padding: 40px 30px 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .h2 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .task-list-container {
+    max-width: 720px;
+  }
+  form .row {
+    display: grid;
+    label input {
+      margin-bottom: 10px;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .task-list-container {
+    max-width: 540px;
+  }
+}
