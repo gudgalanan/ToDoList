@@ -63,6 +63,10 @@
           margin: 0 20px;
           display: flex;
           gap: 10px;
+          input {
+            min-height: 15px;
+            min-width: 15px;
+          }
           span {
             @extend .label;
             overflow: hidden;

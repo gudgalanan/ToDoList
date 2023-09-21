@@ -214,6 +214,10 @@
   display: flex;
   gap: 10px;
 }
+.task-list-container .task-list .task-item .task-item-wrap .task-item-detail input {
+  min-height: 15px;
+  min-width: 15px;
+}
 .task-list-container .task-list .task-item .task-item-wrap .task-item-detail span {
   overflow: hidden;
   display: -webkit-box;
